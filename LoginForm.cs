@@ -59,13 +59,18 @@ namespace Dictionary
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            string userName = "dy tola";
+            string userName = "tola";
             string password = "123";
             if(this.textbox_name.Text == userName && this.textbox_password.Text == password)
             {
                 this.Hide();
                 Main dictionary = new Main();
-                dictionary.Show();
+                dictionary.ShowDialog();
+            }
+            else
+            {
+                LoginForm_error loginForm_Error = new LoginForm_error();
+                loginForm_Error.ShowDialog();
             }
         }
 

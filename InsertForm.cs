@@ -5,11 +5,11 @@ using System.Data;
 using Dictionary.Models;
 namespace Dictionary
 {
-    public partial class Form3 : Form
+    public partial class InsertForm : Form
     {
         public List<DBModel> DB { get; set; }
         public List<DBModel> DB2 { get; set; }
-        public Form3(List<DBModel> db)
+        public InsertForm(List<DBModel> db)
         {
             this.DB = db;
             InitializeComponent();
@@ -47,8 +47,7 @@ namespace Dictionary
                 DB2.Add(new DBModel { word = data.word, description = data.description });
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_insert_Click(object sender, EventArgs e)
         {
             DataSet ds2 = new DataSet();
             DataTable table2 = new DataTable("dictionary");
@@ -56,17 +55,30 @@ namespace Dictionary
             table2.Columns.Add("word");
             table2.Columns.Add("description");
             int i = 0;
-            foreach (DBModel data in this.DB)
+            bool allow = true;
+            foreach (DBModel xdata in this.DB)
             {
-                i += 1;
-                table2.Rows.Add(i, data.word, data.description);
+                if (this.textBox1.Text.ToLower() == xdata.word.ToLower())
+                {
+                    InsertForm_AlertForm alertForm = new InsertForm_AlertForm();
+                    alertForm.ShowDialog();
+                    allow = false;
+                }
             }
-            table2.Rows.Add("12", this.textBox1.Text, this.richTextBox1.Text);
-            DB.Add(new DBModel { word = this.textBox1.Text, description = this.richTextBox1.Text });
-            ds2.Tables.Add(table2);
-            dataGridView1.DataSource = ds2.Tables["dictionary"];
-            this.textBox1.Text = "";
-            this.richTextBox1.Text = "";
+            if (allow)
+            {
+                foreach (DBModel data in this.DB)
+                {
+                    i += 1;
+                    table2.Rows.Add(i, data.word, data.description);
+                }
+                table2.Rows.Add("12", this.textBox1.Text, this.richTextBox1.Text);
+                DB.Add(new DBModel { word = this.textBox1.Text, description = this.richTextBox1.Text });
+                ds2.Tables.Add(table2);
+                dataGridView1.DataSource = ds2.Tables["dictionary"];
+                this.textBox1.Text = "";
+                this.richTextBox1.Text = "";
+            }
         }
     }
 }

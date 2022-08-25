@@ -1,9 +1,9 @@
 namespace Dictionary
 {
-    public partial class Form1 : Form
+    public partial class LoadingForm : Form
     {
         int time2go = 0;
-        public Form1()
+        public LoadingForm()
         {
             InitializeComponent();
             this.timer1.Start();
@@ -22,7 +22,7 @@ namespace Dictionary
             {
                 this.Hide();
                 timer1.Stop();
-                Main FC = new Main();
+                LoginForm FC = new LoginForm();
                 FC.ShowDialog();
                 this.Close();
             }

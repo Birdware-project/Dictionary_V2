@@ -87,7 +87,7 @@ namespace Dictionary
 
         private void InsertDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3(database_word2);
+            InsertForm form3 = new InsertForm(database_word2);
             
             if (form3.ShowDialog() == DialogResult.OK)
             {

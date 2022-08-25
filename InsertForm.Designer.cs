@@ -1,6 +1,6 @@
 ﻿namespace Dictionary
 {
-    partial class Form3
+    partial class InsertForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsertForm));
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -82,7 +82,7 @@
             this.label_word.Font = new System.Drawing.Font("Kh Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_word.Location = new System.Drawing.Point(11, 9);
             this.label_word.Name = "label_word";
-            this.label_word.Size = new System.Drawing.Size(68, 36);
+            this.label_word.Size = new System.Drawing.Size(79, 36);
             this.label_word.TabIndex = 4;
             this.label_word.Text = "Word";
             // 
@@ -92,7 +92,7 @@
             this.label1.Font = new System.Drawing.Font("Kh Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(11, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 36);
+            this.label1.Size = new System.Drawing.Size(153, 36);
             this.label1.TabIndex = 5;
             this.label1.Text = "Description";
             // 
@@ -155,9 +155,9 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "បញ្ចូល";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.btn_insert_Click);
             // 
-            // Form3
+            // InsertForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -172,7 +172,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form3";
+            this.Name = "InsertForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBModelBindingSource)).EndInit();
