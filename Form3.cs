@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using វចនានុក្រម.Models;
-namespace វចនានុក្រម
+using Dictionary.Models;
+namespace Dictionary
 {
     public partial class Form3 : Form
     {

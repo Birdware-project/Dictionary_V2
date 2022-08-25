@@ -1,4 +1,4 @@
-﻿namespace វចនានុក្រម
+﻿namespace Dictionary
 {
     partial class Form3
     {
@@ -143,7 +143,7 @@
             // 
             // dBModelBindingSource
             // 
-            this.dBModelBindingSource.DataSource = typeof(វចនានុក្រម.Models.DBModel);
+            this.dBModelBindingSource.DataSource = typeof(Dictionary.Models.DBModel);
             // 
             // button2
             // 

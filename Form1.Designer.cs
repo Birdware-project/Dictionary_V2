@@ -1,4 +1,4 @@
-﻿namespace វចនានុក្រម
+﻿namespace Dictionary
 {
     partial class Form1
     {
@@ -11,14 +11,7 @@
         ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+       
 
         #region Windows Form Designer generated code
 
@@ -58,7 +51,6 @@
             this.label1.Size = new System.Drawing.Size(198, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "វចនានុក្រមខ្មែរ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

@@ -1,4 +1,4 @@
-﻿namespace វចនានុក្រម
+﻿namespace Dictionary
 {
     partial class Doc
     {

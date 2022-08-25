@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace វចនានុក្រម
+namespace Dictionary
 {
     public partial class LoginForm : Form
     {
@@ -67,6 +67,11 @@ namespace វចនានុក្រម
                 Main dictionary = new Main();
                 dictionary.Show();
             }
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

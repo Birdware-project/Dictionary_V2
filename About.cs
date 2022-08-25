@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace វចនានុក្រម
+namespace Dictionary
 {
     public partial class About : Form
     {

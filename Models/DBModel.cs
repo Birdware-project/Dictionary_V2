@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace វចនានុក្រម.Models
+namespace Dictionary.Models
 {
     public class DBModel
     {
